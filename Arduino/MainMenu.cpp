@@ -63,7 +63,7 @@ int8_t MainMenu::action() {
 }
 
 int8_t MainMenu::right() {
-  // if we want to go to Play Song menu
+  // If we want to go to Play Song menu
   if (idx_ == 2) {
     return 1;
   } else {
@@ -71,10 +71,13 @@ int8_t MainMenu::right() {
     return 0;
   }
 }
-
+// If the Menu is not scrollable, when we move the cursor left, the menu becomes
+// scrollable
 int8_t MainMenu::left() {
   if (!scrollable_) {
     scrollable_ = true;
+    // Current_millis_ - prev_millis_ is always > UPDATE_INTERVAL_MILLIS -> no
+    // delay
     prev_millis_ = -UPDATE_INTERVAL_MILLIS;
     if (use_fan_) {
       use_fan_ = false;

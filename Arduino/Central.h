@@ -32,7 +32,8 @@ class Central {
 
   uint8_t menu_idx_;
   Menu* menus_[2];
-
+  // Variable which gives us the indication whether we must refresh the
+  // interface or not
   bool need_refresh_gui_;
   Direction prev_direction_;
 

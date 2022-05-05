@@ -25,7 +25,7 @@ void Speaker::play_song(const Note notes[], uint8_t song_length) {
 }
 
 void Speaker::stop() { noTone(pin_); }
-// Play the song_index song in the list onto the speaker
+// Play the song_index song in the list with the speaker
 void Speaker::write(const uint8_t& song_index) {
   play_song(SongNotes[song_index], SongLengths[song_index]);
   stop();

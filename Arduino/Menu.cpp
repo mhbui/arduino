@@ -29,6 +29,7 @@ void Menu::scroll(Direction direction) {
 const char* Menu::operator[](uint8_t idx) const { return items_[idx]; }
 
 uint8_t Menu::current_line() const { return line_; }
+// Index of the current line
 uint8_t Menu::current_idx() const { return idx_; }
 uint8_t Menu::size() const { return size_; }
 
