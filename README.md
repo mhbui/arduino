@@ -6,6 +6,9 @@ Sensor. We can also choose to turn on the Fan, and play songs. If we choose to p
 menu in which we will be able to choose the song for the buzzer to play. We use the Joystick to move in the menu and
 between menus
 
+Demo video of the project is
+available [here](https://drive.google.com/file/d/1kI8XR3BWHTZ6K34wA1EKu4E3_fub6izn/view?usp=sharing).
+
 # Materials used
 
 1. Ultrasound Sensor
