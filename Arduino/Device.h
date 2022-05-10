@@ -10,7 +10,7 @@
 class Device {
  protected:
   const char* name_;
-  Device(const char* name) : name_(name) {}
+  Device(const char* name);
 
  public:
   String get_debug_string();

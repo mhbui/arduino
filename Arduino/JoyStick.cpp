@@ -10,6 +10,8 @@ constexpr int LEFT_THRESHOLD = 400;
 constexpr int RIGHT_THRESHOLD = 800;
 constexpr int UP_THRESHOLD = 400;
 constexpr int DOWN_THRESHOLD = 800;
+JoyStick::JoyStick(const uint8_t pin_x, const uint8_t pin_y, const char *name)
+    : InputDevice<Direction>(name, ""), pin_x_(pin_x), pin_y_(pin_y) {}
 
 // Return the current direction of the Joystick (Left/Right/Up/Down/No)
 const Direction &JoyStick::read() {

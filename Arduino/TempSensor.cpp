@@ -6,6 +6,9 @@
 
 #include <Arduino.h>
 
+TempSensor::TempSensor(const uint8_t pin, const char *name)
+    : InputDevice<float>(name, "C"), pin_(pin) {}
+
 // Return the current temperature from TempSensor
 const float &TempSensor::read() {
   int analog = analogRead(pin_);

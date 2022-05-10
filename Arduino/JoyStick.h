@@ -18,13 +18,13 @@ enum class Direction : uint8_t {
 
 class JoyStick : public InputDevice<Direction> {
  private:
+  JoyStick(const int pin_x, const int pin_y, const char *name);
   const uint8_t pin_x_;
   const uint8_t pin_y_;
 
  public:
   JoyStick(const uint8_t pin_x, const uint8_t pin_y,
-           const char *name = "JoyStick")
-      : InputDevice<Direction>(name, ""), pin_x_(pin_x), pin_y_(pin_y) {}
+           const char *name = "JoyStick");
 
   const Direction &read() override;
 };

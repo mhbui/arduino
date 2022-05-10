@@ -6,6 +6,14 @@
 
 #include <Arduino.h>
 
+UltraSoundSensor::UltraSoundSensor(const uint8_t trigger_pin,
+                                   const uint8_t echo_pin, const char *name)
+    : InputDevice<uint8_t>(name, "cm"),
+      trigger_pin_(trigger_pin),
+      echo_pin_(echo_pin) {
+  pinMode(trigger_pin_, OUTPUT);
+  pinMode(echo_pin_, INPUT);
+}
 // Return the current distance from the Ultrasound Sensor
 const uint8_t &UltraSoundSensor::read() {
   // Clears the trigger_pin_ condition

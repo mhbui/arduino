@@ -11,13 +11,12 @@
 
 class Fan : public OutputDevice<uint8_t> {
  private:
+  Fan(const int pin, const char* name);
   const uint8_t pin_;
 
  public:
-  Fan(const uint8_t pin, const char* name = "Fan")
-      : OutputDevice<uint8_t>(name), pin_(pin) {
-    pinMode(pin_, OUTPUT);
-  }
+  Fan(const uint8_t pin, const char* name = "Fan");
+
 
   void write(const uint8_t& speed) override;
 };

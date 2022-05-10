@@ -19,10 +19,7 @@ class Speaker : public OutputDevice<uint8_t> {
   void stop();
 
  public:
-  Speaker(const uint8_t pin, const char* name = "Speaker")
-      : OutputDevice<uint8_t>(name), pin_(pin) {
-    pinMode(pin_, OUTPUT);
-  }
+  Speaker(const uint8_t pin, const char* name = "Speaker");
 
   void write(const uint8_t& song_index) override;
 };

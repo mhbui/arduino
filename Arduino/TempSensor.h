@@ -9,11 +9,12 @@
 
 class TempSensor : public InputDevice<float> {
  private:
+  TempSensor(const int pin, const char* name);
   const uint8_t pin_;
 
  public:
-  TempSensor(const uint8_t pin, const char* name = "Temperature")
-      : InputDevice<float>(name, "C"), pin_(pin) {}
+  TempSensor(const uint8_t pin, const char* name = "Temperature");
+
 
   const float& read() override;
 };

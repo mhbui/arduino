@@ -8,6 +8,11 @@
 
 #include "Pitch.h"
 #include "Songs.h"
+
+Speaker::Speaker(const uint8_t pin, const char* name)
+    : OutputDevice<uint8_t>(name), pin_(pin) {
+  pinMode(pin_, OUTPUT);
+}
 // Play note with its time duration
 void Speaker::play_note(uint16_t pitch, uint8_t length) {
   uint16_t note_length = 1000 / 16 * length;

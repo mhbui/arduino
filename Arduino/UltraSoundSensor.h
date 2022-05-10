@@ -14,13 +14,8 @@ class UltraSoundSensor : InputDevice<uint8_t> {
 
  public:
   UltraSoundSensor(const uint8_t trigger_pin, const uint8_t echo_pin,
-                   const char* name = "Distance")
-      : InputDevice<uint8_t>(name, "cm"),
-        trigger_pin_(trigger_pin),
-        echo_pin_(echo_pin) {
-    pinMode(trigger_pin_, OUTPUT);
-    pinMode(echo_pin_, INPUT);
-  }
+                   const char* name = "Distance");
+
 
   const uint8_t& read() override;
 };
